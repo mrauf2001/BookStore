@@ -8,3 +8,82 @@
   font-weight: normal;
   font-style: normal;
 }
+/* HTML: <div class="loader"></div> */
+.loader {
+  --s: 25px;
+  --g: 5px;
+
+  width: calc(3 * (1.353 * var(--s) + var(--g)));
+  display: grid;
+  justify-items: end;
+  aspect-ratio: 3;
+  overflow: hidden;
+  --_m: linear-gradient(90deg, #0000, #000 15px calc(100% - 15px), #0000);
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+}
+.loader:before {
+  content: "";
+  width: calc(4 * 100% / 3);
+  background: conic-gradient(
+    from -90deg at var(--s) calc(0.353 * var(--s)),
+    #fff 135deg,
+    #666 0 270deg,
+    #aaa 0
+  );
+  --_m: linear-gradient(
+      to bottom right,
+      #0000 calc(0.25 * var(--s)),
+      #000 0 calc(100% - calc(0.25 * var(--s)) - 1.414 * var(--g)),
+      #0000 0
+    ),
+    conic-gradient(
+      from -90deg at right var(--g) bottom var(--g),
+      #000 90deg,
+      #0000 0
+    );
+  -webkit-mask: var(--_m);
+  mask: var(--_m);
+  background-size: calc(100% / 4) 100%;
+  -webkit-mask-size: calc(100% / 4) 100%;
+  mask-size: calc(100% / 4) 100%;
+  -webkit-mask-composite: source-in;
+  mask-composite: intersect;
+  animation: l8 1s infinite linear;
+}
+@keyframes l8 {
+  to {
+    transform: translate(calc(100% / 4));
+  }
+}
+
+/* .loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid blue;
+  border-right: 16px solid green;
+  border-bottom: 16px solid red;
+  border-left: 16px solid pink;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite;
+  animation: spin 2s linear infinite;
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} */

@@ -24,7 +24,7 @@ const CartPage = () => {
           {cartItems.length === 0 ? (
             <p className="text-blue-100">Your cart is empty.</p>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 gap-4">
               {cartItems.map((item) => (
                 <div
                   key={item.id} // Ensure each item has a unique key

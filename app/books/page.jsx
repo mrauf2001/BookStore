@@ -5,6 +5,7 @@ import Footer from "../components/footer/Footer";
 const Book = () => {
   return (
     <>
+
      <div
         className="min-w-full min-h-screen bg-cover bg-center"
         style={{

@@ -1,7 +1,5 @@
-import Image from "next/image";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
-// import bgimg from "../public/websiteHomePage.jpeg";
 export default function Home() {
   return (
     <>
@@ -11,11 +9,6 @@ export default function Home() {
           backgroundImage: "url(/websiteHomePage.jpeg)",
         }}
       >
-        {/* <Image
-          src={bgimg}
-          alt="Background"
-          className="w-full h-screen object-cover absolute right-0 left-0"
-        /> */}
         <Navbar />
         <Footer />
       </div>
