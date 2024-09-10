@@ -25,7 +25,7 @@ const GardenBook = () => {
       <div
         className="w-full h-full bg-cover bg-center"
         style={{
-          backgroundImage: "url(/websiteYoungReadersPage.jpg)",
+          backgroundImage: "url(/websiteYoungReadersPage.jpeg)",
         }}
       >
         <Navbar />

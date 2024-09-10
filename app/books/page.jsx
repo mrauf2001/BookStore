@@ -8,7 +8,7 @@ const Book = () => {
      <div
         className="min-w-full min-h-screen bg-cover bg-center"
         style={{
-          backgroundImage: "url(/websiteHomePage.jpg)",
+          backgroundImage: "url(/websiteHomePage.jpeg)",
         }}
       >
         <Navbar />

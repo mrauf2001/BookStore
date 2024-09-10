@@ -14,7 +14,7 @@ export default function RootLayout({
         <div
           className="min-w-full min-h-screen bg-cover bg-center"
           style={{
-            backgroundImage: "url(/websiteAdultReadersPage.jpg)",
+            backgroundImage: "url(/websiteAdultReadersPage.jpeg)",
           }}
         >
           {children}

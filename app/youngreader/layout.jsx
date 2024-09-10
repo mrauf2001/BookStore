@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
       <div
         className="min-w-full min-h-screen bg-cover bg-center"
         style={{
-          backgroundImage: "url(/websiteAdultReadersPage.jpg)",
+          backgroundImage: "url(/websiteAdultReadersPage.jpeg)",
         }}
       >
           <div>{children}</div>
