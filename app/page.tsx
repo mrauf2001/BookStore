@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
-import bgimg from "./photos/websiteHomePage.jpg";
+import bgimg from "./photos/websiteHomePage.png";
 export default function Home() {
   return (
     <>

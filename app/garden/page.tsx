@@ -6,6 +6,7 @@ import { useCart } from "../components/context/CartContext"; // Import the cart 
 import Image1 from "../../public/Image1.jpeg";
 import Navbar from "../components/navbar/Navbar";
 import MainFooter from "../components/mainFooter/MainFooter";
+import Link from "next/link";
 const GardenBook = () => {
   const { addToCart } = useCart(); // Access the addToCart function from the context
 
@@ -70,9 +71,11 @@ const GardenBook = () => {
               there&apos;s danger afoot...
             </p>
             <div className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4">
-              <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded-md">
-                ← Back
-              </button>
+              <Link href="/youngreader">
+                <button className="bg-gray-200 text-gray-700 px-4 py-2 rounded-md">
+                  ← Back
+                </button>
+              </Link>
               <button
                 className="bg-green-500 text-white px-4 py-2 rounded-md"
                 onClick={handleAddToCart} // Call the function when clicked
