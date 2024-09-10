@@ -1,18 +1,20 @@
 import Link from "next/link";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
-// import bgimg from "../../public/website-home-page.jpg";
+import bgimg from "../../public/website-home-page.jpg";
+import Image from "next/image";
 
 const Book = () => {
   return (
     <>
       <div
         className="relative w-full h-screen bg-cover bg-center"
-        style={{
-          // backgroundImage: `url(${bgimg.src})`,
-          backgroundImage: "url(/website-home-page.jpg)",
-        }}
-      >
+        >
+        <Image
+        src={bgimg}
+        alt="background"
+        className="absolute top-0 left-0 object-cover h-full w-full"
+      />
         <Navbar />
 
         <div className="relative w-full h-full">
