@@ -33,7 +33,7 @@ const CartPage = () => {
                   <div>
                     <h2 className="text-xl font-semibold">{item.title}</h2>
                     <p className="text-gray-600">by {item.author}</p>
-                    <p className="text-gray-600">${item.price}</p>
+                    <p className="text-gray-600">{item.description}</p>
                   </div>
                   <button
                     onClick={() => removeFromCart(item.id)} // Remove only the clicked item

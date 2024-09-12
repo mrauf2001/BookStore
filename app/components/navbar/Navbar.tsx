@@ -7,9 +7,9 @@ const Navbar = () => {
   const { cartItems } = useCart();
   return (
     <div>
-      <nav className="backdrop-blur-sm w-full text-blue-700 py-4 px-4 md:px-8 sticky top-0">
+      <nav className="w-full text-blue-700 py-4 px-4 md:px-8 sticky top-0">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-          <div className="flex flex-col md:flex-row text-center gap-6 md:gap-10 py-4 md:py-10">
+          <div className="flex flex-col md:flex-row text-center gap-6 md:gap-16 py-4 md:py-10">
             <Link href="/">
               <span className="flex items-center">
                 <svg
@@ -29,10 +29,17 @@ const Navbar = () => {
                 </span>
               </span>
             </Link>
-            <Link href="/books">
+            <Link href="/adultreader">
               <span className="flex items-center">
                 <span className="font-bold hover:cursor-pointer leading-[28px] md:leading-[36px] font-grinched text-[24px] md:text-5xl text-blue-700">
-                  Books
+                  AdultReader
+                </span>
+              </span>
+            </Link>
+            <Link href="/youngreader">
+              <span className="flex items-center">
+                <span className="font-bold hover:cursor-pointer leading-[28px] md:leading-[36px] font-grinched text-[24px] md:text-5xl text-blue-700">
+                  YoungReader
                 </span>
               </span>
             </Link>

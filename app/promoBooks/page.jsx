@@ -1,8 +1,7 @@
 import Image from "next/image";
-import { FC } from "react";
-import Link from "next/link";
 import Navbar from "../components/navbar/Navbar";
 import MainFooter from "../components/mainFooter/MainFooter";
+import Link from "next/link";
 
 const books = [
   {
@@ -31,7 +30,7 @@ const books = [
   },
   {
     id: 4,
-    title: "BedTime Bee And Girl-No And Boy-No",
+    title: `BedTime Bee And Girl-No And Boy-No`,
     author: "T.Lee Thomas",
     description:
       "A thrilling adventure that takes readers deep into the heart of the forest.",
@@ -47,46 +46,39 @@ const books = [
   },
 ];
 
-const YoungReaders: FC = () => {
+const PromoBooks = () => {
   return (
-    <>
-      <div
-        className="min-w-full min-h-screen bg-cover bg-center"
-        style={{
-          backgroundImage: "url(/websiteYoungReadersPage.jpeg)",
-        }}
-      >
-        <Navbar />
-        <section className="py-12">
-          <div className="flex flex-col items-center">
-            <div className="mb-8">
-              <Link href="/promoBooks">
-                <button className="bg-blue-500 md:text-5xl text-white md:w-[88] md:h-24 py-4 px-4 rounded-lg mx-2 hover:bg-green-600 transition duration-500">
-                  Promo Books
-                </button>
-              </Link>
+    <div
+      className="min-w-full min-h-screen bg-cover bg-center sm:grid-cols-2"
+      style={{
+        backgroundImage: "url(/websiteHomePage.jpeg)",
+        className : 'object-cover'
+        // Optional background image for promo books page
+      }}
+    >
+      <Navbar />
+      <section className="py-12">
+        <div className="flex flex-wrap justify-center gap-4">
+          {books.map((book) => (
+             <Link key={book.id} href={`/promoBooks/pricing`} passHref>
+            <div key={book.id} className="transition-transform duration-300 transform hover:scale-105 w-52 text-white">
+              <Image
+                src={book.image}
+                alt={book.title}
+                width={200}
+                height={200}
+                className="object-cover"
+              />
+              <h3 className="text-lg font-semibold text-center mt-2 text-wrap">{book.title}</h3>
+              <p className="text-center text-sm text-white">{book.author}</p>
             </div>
-            <div className="flex flex-wrap justify-center gap-4">
-              {books.map((book) => (
-                <Link key={book.id} href={`/books/${book.id}`}>
-                  <div className="transition-transform duration-300 transform hover:scale-105">
-                    <Image
-                      src={book.image}
-                      alt={book.title}
-                      width={200}
-                      height={200}
-                      className="object-cover"
-                    />
-                  </div>
-                </Link>
-              ))}
-            </div>
-          </div>
-        </section>
-      </div>
+            </Link>
+          ))}
+        </div>
+      </section>
       <MainFooter />
-    </>
+    </div>
   );
 };
 
-export default YoungReaders;
+export default PromoBooks;

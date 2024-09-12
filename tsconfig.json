@@ -26,13 +26,14 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/youngreader/layout.jsx",
+    "app/youngreader/ll.jsx",
     "app/context/CartContext.tsx",
     "app/components/navbar/Navbar.tsx",
     "app/components/mainFooter/MainFooter.jsx",
-    "app/garden/page.tsx",
-    "app/books/page.jsx",
-    "app/components/form/Contact.jsx"
+    "app/books/[id]/page.tsx",
+    "app/notused/page.jsx",
+    "app/components/form/Contact.jsx",
+    "app/promoBooks/page.jsx"
   ],
   "exclude": ["node_modules"]
 }

@@ -1,3 +1,4 @@
+import CurrencyConverter from "./components/currencyconverter/CurrencyConverter";
 import Footer from "./components/footer/Footer";
 import Navbar from "./components/navbar/Navbar";
 export default function Home() {
@@ -10,6 +11,7 @@ export default function Home() {
         }}
       >
         <Navbar />
+        <CurrencyConverter />
         <Footer />
       </div>
     </>
