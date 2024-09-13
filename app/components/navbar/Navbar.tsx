@@ -1,15 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { useCart } from "../../components/context/CartContext";
+import { useAppContext } from "../../components/context/CartContext";
 
 const Navbar = () => {
-  const { cartItems } = useCart();
+  const { cartItems } = useAppContext();
   return (
     <div>
       <nav className="w-full text-blue-700 py-4 px-4 md:px-8 sticky top-0">
         <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
-          <div className="flex flex-col md:flex-row text-center gap-6 md:gap-16 py-4 md:py-10">
+          <div className="flex flex-col md:flex-row text-center gap-6 md:gap-8 py-4 md:py-10">
             <Link href="/">
               <span className="flex items-center">
                 <svg
@@ -24,27 +24,34 @@ const Navbar = () => {
                 >
                   <path d="M280.37 148.26L96 300.11V464a16 16 0 0 0 16 16l112.06-.29a16 16 0 0 0 15.92-16V368a16 16 0 0 1 16-16h64a16 16 0 0 1 16 16v95.64a16 16 0 0 0 16 16.05L464 480a16 16 0 0 0 16-16V300L295.67 148.26a12.19 12.19 0 0 0-15.3 0zM571.6 251.47L488 182.56V44.05a12 12 0 0 0-12-12h-56a12 12 0 0 0-12 12v72.61L318.47 43a48 48 0 0 0-61 0L4.34 251.47a12 12 0 0 0-1.6 16.9l25.5 31A12 12 0 0 0 45.15 301l235.22-193.74a12.19 12.19 0 0 1 15.3 0L530.9 301a12 12 0 0 0 16.9-1.6l25.5-31a12 12 0 0 0-1.7-16.93z"></path>
                 </svg>
-                <span className="font-bold hover:cursor-pointer text-[24px] md:text-5xl leading-[28px] md:leading-[36px] font-grinched text-blue-700">
+                <span className="font-bold hover:cursor-pointer text-[24px] md:text-[50px]  leading-[28px] md:leading-[36px] font-grinched text-blue-700">
                   Home
                 </span>
               </span>
             </Link>
             <Link href="/adultreader">
               <span className="flex items-center">
-                <span className="font-bold hover:cursor-pointer leading-[28px] md:leading-[36px] font-grinched text-[24px] md:text-5xl text-blue-700">
+                <span className="font-bold hover:cursor-pointer leading-[28px] md:leading-[36px] font-grinched text-[24px] md:text-[50px]  text-blue-700">
                   AdultReader
                 </span>
               </span>
             </Link>
             <Link href="/youngreader">
               <span className="flex items-center">
-                <span className="font-bold hover:cursor-pointer leading-[28px] md:leading-[36px] font-grinched text-[24px] md:text-5xl text-blue-700">
+                <span className="font-bold hover:cursor-pointer leading-[28px] md:leading-[36px] font-grinched text-[24px] md:text-[50px]  text-blue-700">
                   YoungReader
                 </span>
               </span>
             </Link>
+            <Link href="promoBooks/pricing">
+              <span className="flex items-center">
+                <span className="font-bold hover:cursor-pointer leading-[28px] md:leading-[36px] font-grinched text-[24px] md:text-[50px] text-blue-700">
+                  PromoBooks
+                </span>
+              </span>
+            </Link>
           </div>
-          <div className="pr-0 md:pr-40 flex gap-6 md:gap-10">
+          <div className="pr-0 md:pr-15 flex gap-6 md:gap-6">
             <Link href="/cart">
               <span className="flex items-center">
                 <div className="flex ">
@@ -67,7 +74,7 @@ const Navbar = () => {
                     </sup>
                   </div>
                 </div>
-                <span className="font-bold hover:cursor-pointer font-grinched text-[24px] md:text-5xl text-blue-700 leading-[28px] md:leading-[36px]">
+                <span className="font-bold hover:cursor-pointer font-grinched text-[24px] md:text-[45px] text-blue-700 leading-[28px] md:leading-[36px]">
                   Cart
                 </span>
               </span>
@@ -80,3 +87,11 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+<div className="mb-8">
+  <Link href="/promoBooks">
+    <button className="bg-blue-500 md:text-5xl text-white md:w-[88] md:h-24 py-4 px-4 rounded-lg mx-2 hover:bg-green-600 transition duration-500">
+      Promo Books
+    </button>
+  </Link>
+</div>;

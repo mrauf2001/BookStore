@@ -31,7 +31,7 @@
     "app/components/navbar/Navbar.tsx",
     "app/components/mainFooter/MainFooter.jsx",
     "app/books/[id]/page.tsx",
-    "app/notused/page.jsx",
+    "app/booksIgnored/page.jsx",
     "app/components/form/Contact.jsx",
     "app/promoBooks/page.jsx"
   ],

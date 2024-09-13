@@ -2,6 +2,7 @@ import Image from "next/image";
 import Navbar from "../components/navbar/Navbar";
 import MainFooter from "../components/mainFooter/MainFooter";
 import Link from "next/link";
+import CurrencyConverter from "../components/currencyconverter/CurrencyConverter";
 
 const books = [
   {
@@ -14,23 +15,23 @@ const books = [
   },
   {
     id: 2,
-    title: "The Garden's Secret",
-    author: "Alice W. Moon",
+    title: "Bedtime Bee and the Cat",
+    author: "T.Lee Thomas",
     description:
       "A mystery that takes place in an enchanted garden, revealing long-hidden secrets.",
     image: "/Book2.jpeg",
   },
   {
     id: 3,
-    title: "Whispers in the Trees",
-    author: "Jonathan Breeze",
+    title: "Bedtime Bee and the Birthday Bear",
+    author: "T.Lee Thomas",
     description:
       "A thrilling adventure that takes readers deep into the heart of the forest.",
     image: "/Book3.jpeg",
   },
   {
     id: 4,
-    title: `BedTime Bee And Girl-No And Boy-No`,
+    title: `Bedtime Bee and Girl-No and Boy-No`,
     author: "T.Lee Thomas",
     description:
       "A thrilling adventure that takes readers deep into the heart of the forest.",
@@ -57,6 +58,7 @@ const PromoBooks = () => {
       }}
     >
       <Navbar />
+      <CurrencyConverter />
       <section className="py-12">
         <div className="flex flex-wrap justify-center gap-4">
           {books.map((book) => (

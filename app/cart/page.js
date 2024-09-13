@@ -1,11 +1,12 @@
 "use client";
 import React from "react";
-import { useCart } from "../components/context/CartContext"; // Import the cart context
+import { useAppContext, useCart } from "../components/context/CartContext"; // Import the cart context
 import ContactForm from "../components/form/Contact";
 import Navbar from "../components/navbar/Navbar";
+import CurrencyConverter from "../components/currencyconverter/CurrencyConverter";
 
 const CartPage = () => {
-  const { cartItems, setCartItems } = useCart(); // Access cart items and setter function
+  const { cartItems, setCartItems } = useAppContext(); // Access cart items and setter function
 
   // Function to remove item from the cart
   const removeFromCart = (id) => {
@@ -17,6 +18,7 @@ const CartPage = () => {
   return (
     <>
       <Navbar />
+      <CurrencyConverter />
       <div className="min-h-screen p-4 lg:p-10 flex flex-col lg:flex-row gap-8">
         <div className="lg:w-1/2 w-full">
           <h1 className="text-3xl font-bold mb-6 text-blue-300">Your Cart</h1>

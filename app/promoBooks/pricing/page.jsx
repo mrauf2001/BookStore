@@ -1,5 +1,6 @@
 import Navbar from "../../components/navbar/Navbar";
 import MainFooter from "../../components/mainFooter/MainFooter";
+import CurrencyConverter from "@/app/components/currencyconverter/CurrencyConverter";
 
 const PriceCards = () => {
   const options = [
@@ -17,6 +18,7 @@ const PriceCards = () => {
         }}
       >
         <Navbar />
+        <CurrencyConverter />
         <section className="py-12">
           <div className="flex flex-wrap justify-center gap-8">
             {options.map((option) => (

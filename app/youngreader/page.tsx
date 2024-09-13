@@ -3,6 +3,7 @@ import { FC } from "react";
 import Link from "next/link";
 import Navbar from "../components/navbar/Navbar";
 import MainFooter from "../components/mainFooter/MainFooter";
+import CurrencyConverter from "../components/currencyconverter/CurrencyConverter";
 
 const books = [
   {
@@ -57,15 +58,9 @@ const YoungReaders: FC = () => {
         }}
       >
         <Navbar />
+        <CurrencyConverter />
         <section className="py-12">
           <div className="flex flex-col items-center">
-            <div className="mb-8">
-              <Link href="/promoBooks">
-                <button className="bg-blue-500 md:text-5xl text-white md:w-[88] md:h-24 py-4 px-4 rounded-lg mx-2 hover:bg-green-600 transition duration-500">
-                  Promo Books
-                </button>
-              </Link>
-            </div>
             <div className="flex flex-wrap justify-center gap-4">
               {books.map((book) => (
                 <Link key={book.id} href={`/books/${book.id}`}>

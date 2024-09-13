@@ -13,10 +13,10 @@ import {
 
 const MainFooter = () => {
   return (
-    <footer className="bg-black text-white p-8 flex-col">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="bg-black text-white p-8 flex-col ">
+      <div className=" container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
         <div>
-          <h2 className="text-[36px] font-bold">Wwi press</h2>
+          <h2 className="text-[30px] font-bold text-center">Whimsical What's It Press</h2>
         </div>
 
         <div>
@@ -51,7 +51,7 @@ const MainFooter = () => {
           <ul className="mt-4 space-y-2">
             <li className="flex items-center text-blue-700">
               <FontAwesomeIcon icon={faComments} className="w-6 h-6 md:w-8 md:h-8 mr-2" />{" "}
-              Email: Info@Wwipress.com
+              Email: Info@WwiPress.com
             </li>
           </ul>
         </div>

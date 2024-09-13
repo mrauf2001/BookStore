@@ -3,6 +3,8 @@ import { useParams } from "next/navigation";
 import Image from "next/image";
 import Navbar from "../../components/navbar/Navbar";
 import MainFooter from "../../components/mainFooter/MainFooter";
+import { useAppContext } from "../../components/context/CartContext"; // Import the useCart hook
+import CurrencyConverter from "@/app/components/currencyconverter/CurrencyConverter";
 
 const books = [
   {
@@ -50,6 +52,7 @@ const books = [
 const BookDetails = () => {
   const { id } = useParams(); // Extract dynamic route params
   const bookId = parseInt(id as string, 10); // Convert the id to a number
+  const { addToCart } = useAppContext(); // Use the useCart hook to get the addToCart function
 
   // Find the book using the id from params
   const book = books.find((book) => book.id === bookId);
@@ -58,9 +61,16 @@ const BookDetails = () => {
     return <p>Book not found!</p>; // Fallback if no book is found
   }
 
+  // Handle adding the book to the cart
+  const handleAddToCart = () => {
+    addToCart(book); // Add the current book to the cart
+    alert(`${book.title} added to the cart!`);
+  };
+
   return (
     <>
       <Navbar />
+      <CurrencyConverter />
       <div className="min-h-screen flex flex-col items-center justify-center py-8 bg-gray-100">
         <div className="max-w-3xl bg-white shadow-md rounded-lg p-6">
           <div className="flex flex-col md:flex-row">
@@ -86,7 +96,10 @@ const BookDetails = () => {
                 >
                   ← Back
                 </button>
-                <button className="bg-green-500 text-white px-4 py-2 rounded-md">
+                <button
+                  className="bg-green-500 text-white px-4 py-2 rounded-md"
+                  onClick={handleAddToCart} // Add book to cart when clicked
+                >
                   Add to Cart
                 </button>
               </div>
